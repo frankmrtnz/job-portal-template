@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/ffb2f7412c.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../css/estilos.css">
+
+  <title>Proyecto Diseño 2ª Evaluación - Francisco Martínez Martín</title>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><img src="../images/logo.s6" alt="logobanner"
+          style="max-width: 190px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:rgb(7, 7, 78); font-size:28px;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#inicio">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../temporal.html">Temporal</a></li>
+              <li><a class="dropdown-item" href="../indefinido.html">Indefinido</a></li>
+              <li><a class="dropdown-item" href="../freelance.html">Freelance</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="../allcategories.html">Todas las Categorías</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="index.html#curriculum">Sube tu CV</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Conócenos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../index.html#proceso">Proceso</a></li>
+              <li><a class="dropdown-item" href="../index.html#personal">Personal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="../images/espana.png" alt="espanol" class="imgBandera"> Español
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#"><img src="../images/united-kingdom.png" alt="inglés"
+                    class="imgBandera"> Inglés</a></li>
+              <li><a class="dropdown-item" href="#"><img src="../images/france.png" alt="francés" class="imgBandera">
+                  Francés</a></li>
+              <li><a class="dropdown-item" href="#"><img src="../images/portugal.png" alt="portugués" class="imgBandera">
+                  Portugués</a></li>
+            </ul>
+          </li>
+
+
+          <form class="d-flex">
+            <a href="../registro.html"><button type="button" class="btnRegister">Registrarse</button></a>
+            <a href="../login.html"><button type="button" class="btnLogin mx-2">Identificarse</button></a>
+            <br>
+
+          </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Sección Migas de pan -->
+  <section class="migaspan">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <span style="margin-left: 10px;"> Estás navegando en: &nbsp;</span>
+        <li class="breadcrumb-item active" aria-current="page"><a href="../index.html"
+            style="color: rgb(7, 7, 78);">Inicio</a></span></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="../allcategories.html"
+            style="color: rgb(7, 7, 78);">Categorías</a></span></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="empleo1.html">Empleo 1</a></li>
+      </ol>
+    </nav>
+  </section>
+
+
+  <!-- Sección Todas Categorías -->
+  <section class="contacto py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 m-auto">
+          <div class="well well-sm">
+            <h2 class="header" id="contacto" style="border-radius: 20px; text-align: center;">DETALLE DEL EMPLEO</h2>
+            <br>
+
+            <!--Select para ordenar trabajo-->
+            <div class="contenidoOrdenarTrabajos">
+              <select name="ordenarTrabajos" id="ordenarOfertas" onchange="ordenarLista()">
+                <option value="0">Selecciona un orden</option>
+                <option value="masAlto">Salario: Más alto</option>
+                <option value="masBajo">Salario: Más bajo</option>
+                <option value="nombre">Nombre: Alfabéticamente</option>
+              </select>
+            </div>
+            <br><br>
+
+            <div id="sidebar-accordion" class="accordion mt-3" style="float: left; margin-right: 20px;">
+              <!-- Boton para volver -->
+              <p class="text-center">
+                <a href="../allcategories.html"><button type="button" class="btn btn-danger"
+                    style="margin: 5px 20px;"><i class="fa-solid fa-backward">&nbsp;Volver</i></button></a>
+              </p>
+              <!-- Boton para Inscribirse -->
+              <p class="text-center">
+                <a href="#"><button type="button" class="btn btn-primary" style="margin:10px 20px;"><i
+                      class="fa-solid fa-forward">&nbsp;Inscribirse</i></button></a>
+              </p>
+              <h4>Categorías:</h4>
+              <div class="list-group" style="width: 8em;">
+                <a href="../allcategories.html" data-toggle="collapse" aria-expanded="false"
+                  class="list-group-item list-group-item-action bg-secondary text-light">
+                  Todas
+                </a>
+                <a href="../temporal.html" data-toggle="collapse" aria-expanded="false"
+                  class="list-group-item list-group-item-action bg-dark text-light">
+                  Temporal
+                </a>
+                <a href="../indefinido.html" data-toggle="collapse" aria-expanded="false"
+                  class="list-group-item list-group-item-action bg-dark text-light">
+                  Indefinido
+                </a>
+                <a href="../freelance.html" data-toggle="collapse" aria-expanded="false"
+                  class="list-group-item list-group-item-action bg-dark text-light">
+                  Freelance
+                </a>
+                </a>
+                <br>
+              </div>
+
+            </div>
+
+
+
+            <div class="container contenidoOfertas">
+              <div id="contenidoTodasCategorias" class="row">
+
+                <div class="contenedor text-center mt-3" style="max-width: 800px; margin: auto;">
+                  <ul class=" list-group list-group-flush" style="border-radius:15px;">
+                    <li class="list-group-item bg-dark text-white">
+                      <h5 class="card-title display-6"
+                        style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">EMPLEO 1</h5>
+                    </li>
+                    <li class="list-group-item bg-dark text-white"><span style="float: center;"><i
+                          class="fa-solid fa-circle-info">&nbsp;</i>DESCRIPCIÓN:</span> <br>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id assumenda cum accusantium eius!
+                        Molestias dolores eaque natus culpa quae magni incidunt magnam modi a beatae obcaecati, id quasi
+                        nam. Adipisci..
+                      </p>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="contenedor text-center mt-3 m-auto" style="max-width: 600px;">
+                  <ul class=" list-group list-group-flush" style="border-radius:15px;">
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fas fa-briefcase">&nbsp;</i>EMPRESA: <br>
+                        Empresa1</span></li>
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fa-solid fa-tag">&nbsp;</i>CATEGORÍA: <br> Indefinido</span></li>
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fa-solid fa-people-carry-box">&nbsp;</i>HABILIDADES: <br> HTML5, CSS, Bootstrap,
+                        Angular, JS, PHP...</span></li>
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fa-solid fa-star">&nbsp;</i>EXPERIENCIA <br> 1-2 años</span></li>
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fa-solid fa-euro-sign">&nbsp;</i>SALARIO: <br>
+                        <span>2000€</span>
+                    </li>
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fa-solid fa-calendar-days">&nbsp;</i>DURACIÓN: <br> Indefinido</span></li>
+                    <li class="list-group-item bg-primary text-white"><span><i
+                          class="fa-solid fa-clock">&nbsp;</i>HORAS: <br>
+                        <span>40 h/semana</span>
+                      </span></li>
+
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--BOTON PARA IR HACIA ARRIBA EN LA PÁGINA-->
+  <a href="empleo1.html" class="enlaceBtnArriba">
+    <div class="scrollup" title="Ir arriba"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
+  </a>
+
+
+  <br><br><br><br>
+  <hr>
+
+
+
+
+  <!-- Sección Footer -->
+  <footer class="bg-light text-center text-black mt-3">
+    <h5>Síguenos en:</h5>
+    <!-- Grid container -->
+    <div class="container p-2 pb-0">
+      <!-- Section: Redes Sociales-->
+      <section class="mb-4 RRSS">
+
+        <!-- Facebook -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/"
+          target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="https://twitter.com/"
+          target="_blank" role="button"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="https://www.google.es/"
+          target="_blank" role="button"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/"
+          target="_blank" role="button"><i class="fab fa-instagram"></i></a>
+
+      </section>
+
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <!-- Certificación -->
+      <span><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"><img src="../images/certificate.jpg" alt="certificate" class="imgCertificate"></a></span>
+      <br><br>
+      <span class="garantia">
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"><img src="../images/shield.png" alt="Protección" class="imgFooter"></a>
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"><img src="../images/guarantee.png" alt="Garantía" class="imgFooter"></a>
+      </span>
+      © 2022 Copyright: Francisco Martínez Martín -
+      <a href="https://site.educa.madrid.org/ies.elcanaveral.mostoles/" target="_blank">IES El Cañaveral</a> -
+      <!-- Sitemap -->
+      <span style="margin-left: 5px;">[<a href="../sitemap.html">Sitemap</a>]</span>
+      
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
